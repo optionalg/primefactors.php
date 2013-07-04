@@ -9,7 +9,7 @@ class PrimeFactorsTests extends \PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function givenANumberShouldReturnPrimeFactors()
+    public function givenAIntegerShouldReturnPrimeFactors()
     {
         $this->assertPrimeFactors(array(), 1);
         $this->assertPrimeFactors(array(2), 2);
@@ -26,8 +26,8 @@ class PrimeFactorsTests extends \PHPUnit_Framework_TestCase
         $this->assertPrimeFactors(array(2, 3, 5, 5, 7, 11, 13), 150150);
     }
 
-    protected function assertPrimeFactors($factors, $number)
+    protected function assertPrimeFactors($primes, $integer)
     {
-        assertEquals($factors, PrimeFactors::decompose($number), 'Test fails for ' . $number);
+        assertEquals($primes, PrimeFactors::decompose($integer), 'Test fails for ' . $integer);
     }
 }
