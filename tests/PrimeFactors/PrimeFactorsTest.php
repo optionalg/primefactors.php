@@ -28,6 +28,6 @@ class PrimeFactorsTests extends \PHPUnit_Framework_TestCase
 
     protected function assertPrimeFactors($primes, $integer)
     {
-        assertEquals($primes, PrimeFactors::decompose($integer), 'Test fails for ' . $integer);
+        assertEquals($primes, PrimeFactors::of($integer), 'Test fails for ' . $integer);
     }
 }

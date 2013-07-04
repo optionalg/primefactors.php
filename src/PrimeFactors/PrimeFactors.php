@@ -18,7 +18,7 @@ class PrimeFactors
      *
      * @return array an array of primes
      */
-    public static function decompose($integer)
+    public static function of($integer)
     {
         $primes = array();
 
