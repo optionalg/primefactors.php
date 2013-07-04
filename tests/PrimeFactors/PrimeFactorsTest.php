@@ -26,7 +26,7 @@ class PrimeFactorsTests extends \PHPUnit_Framework_TestCase
         $this->assertPrimeFactors(array(2, 3, 5, 5, 7, 11, 13), 150150);
     }
 
-    public function assertPrimeFactors($factors, $number)
+    protected function assertPrimeFactors($factors, $number)
     {
         assertEquals($factors, PrimeFactors::decompose($number), 'Test fails for ' . $number);
     }
