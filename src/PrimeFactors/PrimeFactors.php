@@ -22,9 +22,13 @@ class PrimeFactors
     {
         $primes = array();
 
-        for ($candidate = 2; $integer > 1; $candidate++)
+        for ($candidate = 2; $integer >= $candidate * $candidate; $candidate++)
             for (; $integer % $candidate == 0; $integer /= $candidate)
                 $primes[] = $candidate;
+
+        if ($integer > 1) {
+            $primes[] = $integer;
+        }
 
         return $primes;
     }
